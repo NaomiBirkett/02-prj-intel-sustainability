@@ -49,9 +49,9 @@ section {
   padding: 20px 0;
   max-width: 970px; /* 4 cards: (4 x 200px) + (3 x 10px gap) = 830px */
   margin: 0 auto;
-  /* Hide scrollbar for a cleaner look (optional) */
   scrollbar-width: thin;
   scrollbar-color: #258edf #e0e0e0;
+  scroll-snap-type: x mandatory; /* Enable horizontal scroll snap */
 }
 
 /* Each timeline card */
@@ -67,6 +67,7 @@ section > div {
   flex-shrink: 0; /* Prevent cards from shrinking */
   position: relative; /* Needed for overlay positioning */
   overflow: hidden;   /* Hide overlay outside card */
+  scroll-snap-align: start; /* Snap each card to the start of the scroll area */
 }
 
 /* Add a hover effect to cards */
